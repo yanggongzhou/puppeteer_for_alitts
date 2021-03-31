@@ -45,7 +45,7 @@
 
       testTtsApi(){
         axios({
-          url:'http://127.0.0.1:3000/CMU/getALITTS',
+          url:'http://39.106.142.30:3000/CMU/getALITTS',
           method:'post',
           data:{
             text:this.text,
@@ -96,7 +96,8 @@
         window.currentWordsTimeArr = this.AMSound.TTS.audioInfo[0].currentWordsTimeArr
         let _a = this.AMSound.TTS.audioInfo[0].audio_buffer
         let Base64 = require('js-base64').Base64;
-        window.base64_audio = 'data:audio/mp3;base64,'+Base64.encode(_a)
+        // window.base64_audio = 'data:audio/wav;base64,'+Base64.encode(_a)
+        window.base64_audio = Base64.encode(_a)
         this.ab2str(_a,function(str){
           //str为字符串
           console.log("str------",str)
