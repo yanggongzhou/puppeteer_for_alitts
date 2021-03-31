@@ -55,7 +55,6 @@
             pitchRate:0
           }
         }).then(res=>{
-          let Base64 = require('js-base64').Base64;
           console.log(res.data)
           this.responseData = res.data
         })
