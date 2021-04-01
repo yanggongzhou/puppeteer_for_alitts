@@ -508,9 +508,9 @@ var WS = /** @class */ (function () {
      * 构造函数
      */
     function WS(_a) {
-        var 
+        var
         /** 网关地址 */
-        server = _a.server, 
+        server = _a.server,
         /** 鉴权用的 accessToken */
         token = _a.token;
         /** error handler */
@@ -841,15 +841,15 @@ var Speech = /** @class */ (function () {
      * 构造函数
      */
     function Speech(_a) {
-        var 
+        var
         /** 应用 appkey */
-        appkey = _a.appkey, 
+        appkey = _a.appkey,
         /** 网关地址 */
-        server = _a.server, 
+        server = _a.server,
         /** 设备 id */
-        deviceId = _a.deviceId, 
+        deviceId = _a.deviceId,
         /** token 配置 */
-        accessToken = _a.accessToken, 
+        accessToken = _a.accessToken,
         /** @deprecated token 获取函数 */
         getAccessToken = _a.getAccessToken;
         var _this = this;
@@ -1050,11 +1050,11 @@ var NlsCommand = /** @class */ (function () {
      * 构造函数
      */
     function NlsCommand(_a) {
-        var 
+        var
         /** 设备 id */
-        deviceId = _a.deviceId, 
+        deviceId = _a.deviceId,
         /** 任务 id */
-        taskId = _a.taskId, 
+        taskId = _a.taskId,
         /** 应用 appkey */
         appkey = _a.appkey;
         /** 命名空间 */
@@ -1187,17 +1187,17 @@ var RecognitionCommand = /** @class */ (function (_super) {
      * 构造函数
      */
     function RecognitionCommand(_a) {
-        var 
+        var
         /** 设备 id */
-        deviceId = _a.deviceId, 
+        deviceId = _a.deviceId,
         /** 任务 id */
-        taskId = _a.taskId, 
+        taskId = _a.taskId,
         /** 应用 appkey */
-        appkey = _a.appkey, 
+        appkey = _a.appkey,
         /** 识别实例 */
-        instance = _a.instance, 
+        instance = _a.instance,
         /** 配置格式化钩子 */
-        optionsFormat = _a.optionsFormat, 
+        optionsFormat = _a.optionsFormat,
         /** 自定义命令钩子 */
         parseCommand = _a.parseCommand;
         var _this = _super.call(this, {
@@ -1399,21 +1399,21 @@ var AudioType;
 var Audio = /** @class */ (function () {
     /** constructor */
     function Audio(_a) {
-        var _b = _a === void 0 ? {} : _a, 
+        var _b = _a === void 0 ? {} : _a,
         /** 音频类型 */
-        _c = _b.type, 
+        _c = _b.type,
         /** 音频类型 */
-        type = _c === void 0 ? AudioType.PCM : _c, 
+        type = _c === void 0 ? AudioType.PCM : _c,
         /** 音轨数 */
-        _d = _b.channels, 
+        _d = _b.channels,
         /** 音轨数 */
-        channels = _d === void 0 ? 1 : _d, 
+        channels = _d === void 0 ? 1 : _d,
         /** 采样率 */
-        _e = _b.sampleRate, 
+        _e = _b.sampleRate,
         /** 采样率 */
-        sampleRate = _e === void 0 ? 16000 : _e, 
+        sampleRate = _e === void 0 ? 16000 : _e,
         /** 每个样本的位数 */
-        _f = _b.bitsPerSample, 
+        _f = _b.bitsPerSample,
         /** 每个样本的位数 */
         bitsPerSample = _f === void 0 ? 16 : _f;
         this.type = type;
@@ -7140,17 +7140,17 @@ function getPCMTypedArray(buffer, type) {
  * @return 添加头部后的 wav arrayBuffer
  */
 var pcm2audio = function (buffer, context, _a) {
-    var _b = _a === void 0 ? {} : _a, 
+    var _b = _a === void 0 ? {} : _a,
     /** 编码格式 */
-    _c = _b.encoding, 
+    _c = _b.encoding,
     /** 编码格式 */
-    encoding = _c === void 0 ? PCMEncodingType.PCMEncodingType16BitInt : _c, 
+    encoding = _c === void 0 ? PCMEncodingType.PCMEncodingType16BitInt : _c,
     /** 声道数 */
-    _d = _b.channels, 
+    _d = _b.channels,
     /** 声道数 */
-    channels = _d === void 0 ? 1 : _d, 
+    channels = _d === void 0 ? 1 : _d,
     /** 采样率 */
-    _e = _b.sampleRate, 
+    _e = _b.sampleRate,
     /** 采样率 */
     sampleRate = _e === void 0 ? 16000 : _e;
     // 原始采样数据
@@ -7177,21 +7177,21 @@ var PCM = /** @class */ (function (_super) {
     __extends$1(PCM, _super);
     /** constructor */
     function PCM(_a) {
-        var _b = _a === void 0 ? {} : _a, 
+        var _b = _a === void 0 ? {} : _a,
         /** 音轨数 */
-        _c = _b.channels, 
+        _c = _b.channels,
         /** 音轨数 */
-        channels = _c === void 0 ? 1 : _c, 
+        channels = _c === void 0 ? 1 : _c,
         /** 采样率 */
-        _d = _b.sampleRate, 
+        _d = _b.sampleRate,
         /** 采样率 */
-        sampleRate = _d === void 0 ? 16000 : _d, 
+        sampleRate = _d === void 0 ? 16000 : _d,
         /** 每个样本的位数 */
-        _e = _b.bitsPerSample, 
+        _e = _b.bitsPerSample,
         /** 每个样本的位数 */
-        bitsPerSample = _e === void 0 ? 16 : _e, 
+        bitsPerSample = _e === void 0 ? 16 : _e,
         /** 音频内容 */
-        _f = _b.content, 
+        _f = _b.content,
         /** 音频内容 */
         content = _f === void 0 ? new ArrayBuffer(0) : _f;
         var _this = _super.call(this, {
@@ -7293,21 +7293,21 @@ var WAV = /** @class */ (function (_super) {
     __extends$1(WAV, _super);
     /** constructor */
     function WAV(_a) {
-        var _b = _a === void 0 ? {} : _a, 
+        var _b = _a === void 0 ? {} : _a,
         /** 音轨数 */
-        _c = _b.channels, 
+        _c = _b.channels,
         /** 音轨数 */
-        channels = _c === void 0 ? 1 : _c, 
+        channels = _c === void 0 ? 1 : _c,
         /** 采样率 */
-        _d = _b.sampleRate, 
+        _d = _b.sampleRate,
         /** 采样率 */
-        sampleRate = _d === void 0 ? 16000 : _d, 
+        sampleRate = _d === void 0 ? 16000 : _d,
         /** 每个样本的位数 */
-        _e = _b.bitsPerSample, 
+        _e = _b.bitsPerSample,
         /** 每个样本的位数 */
-        bitsPerSample = _e === void 0 ? 16 : _e, 
+        bitsPerSample = _e === void 0 ? 16 : _e,
         /** 音频内容 */
-        _f = _b.content, 
+        _f = _b.content,
         /** 音频内容 */
         content = _f === void 0 ? new ArrayBuffer(0) : _f;
         var _this = _super.call(this, {
@@ -7380,17 +7380,17 @@ var WAV = /** @class */ (function (_super) {
 var ResamplerL16 = /** @class */ (function () {
     function ResamplerL16(_a) {
         var _this = this;
-        var _b = _a === void 0 ? {} : _a, 
+        var _b = _a === void 0 ? {} : _a,
         // 原始采样率
-        _c = _b.sourceSampleRate, 
+        _c = _b.sourceSampleRate,
         // 原始采样率
-        sourceSampleRate = _c === void 0 ? 44100 : _c, 
+        sourceSampleRate = _c === void 0 ? 44100 : _c,
         // 目标采样率
-        _d = _b.targetSampleRate, 
+        _d = _b.targetSampleRate,
         // 目标采样率
-        targetSampleRate = _d === void 0 ? 16000 : _d, 
+        targetSampleRate = _d === void 0 ? 16000 : _d,
         // 降采样回调
-        _e = _b.onReSample, 
+        _e = _b.onReSample,
         // 降采样回调
         onReSample = _e === void 0 ? function () { } : _e;
         this.onData = function (resampler) {
@@ -7441,41 +7441,41 @@ var Player = /** @class */ (function () {
      */
     function Player(_a) {
         var _this = this;
-        var _b = _a === void 0 ? {} : _a, 
+        var _b = _a === void 0 ? {} : _a,
         /** 是否自动播放 */
-        _c = _b.autoplay, 
+        _c = _b.autoplay,
         /** 是否自动播放 */
-        autoplay = _c === void 0 ? true : _c, 
+        autoplay = _c === void 0 ? true : _c,
         /** 编码格式 */
-        _d = _b.encoding, 
+        _d = _b.encoding,
         /** 编码格式 */
-        encoding = _d === void 0 ? PCMEncodingType.PCMEncodingType16BitInt : _d, 
+        encoding = _d === void 0 ? PCMEncodingType.PCMEncodingType16BitInt : _d,
         /** 采样率 */
-        _e = _b.sampleRate, 
+        _e = _b.sampleRate,
         /** 采样率 */
-        sampleRate = _e === void 0 ? 16000 : _e, 
+        sampleRate = _e === void 0 ? 16000 : _e,
         /** 声道数 */
-        _f = _b.channels, 
+        _f = _b.channels,
         /** 声道数 */
-        channels = _f === void 0 ? 1 : _f, 
+        channels = _f === void 0 ? 1 : _f,
         /** flush time，单位 ms，读取缓冲的时间间隔，大小一般和语音片段播放长度有关系 */
-        _g = _b.flushTime, 
+        _g = _b.flushTime,
         /** flush time，单位 ms，读取缓冲的时间间隔，大小一般和语音片段播放长度有关系 */
-        flushTime = _g === void 0 ? 200 : _g, 
+        flushTime = _g === void 0 ? 200 : _g,
         /** 播放器第一次有数据，可以播放 */
-        _h = _b.onReady, 
+        _h = _b.onReady,
         /** 播放器第一次有数据，可以播放 */
-        onReady = _h === void 0 ? function () { } : _h, 
+        onReady = _h === void 0 ? function () { } : _h,
         /** 开始播放 */
-        _j = _b.onPlay, 
+        _j = _b.onPlay,
         /** 开始播放 */
-        onPlay = _j === void 0 ? function () { } : _j, 
+        onPlay = _j === void 0 ? function () { } : _j,
         /** 播放暂停回调 */
-        _k = _b.onPause, 
+        _k = _b.onPause,
         /** 播放暂停回调 */
-        onPause = _k === void 0 ? function () { } : _k, 
+        onPause = _k === void 0 ? function () { } : _k,
         /** 播放停止回调 */
-        _l = _b.onStop, 
+        _l = _b.onStop,
         /** 播放停止回调 */
         onStop = _l === void 0 ? function () { } : _l;
         /** 音频缓存 */
@@ -7758,21 +7758,21 @@ var Recorder = /** @class */ (function () {
      */
     function Recorder(_a) {
         var _this = this;
-        var _b = _a === void 0 ? {} : _a, 
+        var _b = _a === void 0 ? {} : _a,
         /** deviceId，指定输入设备 */
-        deviceId = _b.deviceId, 
+        deviceId = _b.deviceId,
         /** 采样率 */
-        sampleRate = _b.sampleRate, 
+        sampleRate = _b.sampleRate,
         /** 成功获取权限 */
-        _c = _b.onGetPermission, 
+        _c = _b.onGetPermission,
         /** 成功获取权限 */
-        onGetPermission = _c === void 0 ? function () { } : _c, 
+        onGetPermission = _c === void 0 ? function () { } : _c,
         /** 录音数据回调函数（频率会比录音状态慢，会缓冲一段） */
-        _d = _b.onData, 
+        _d = _b.onData,
         /** 录音数据回调函数（频率会比录音状态慢，会缓冲一段） */
-        onData = _d === void 0 ? function () { } : _d, 
+        onData = _d === void 0 ? function () { } : _d,
         /** 录音错误回调函数 */
-        _e = _b.onError, 
+        _e = _b.onError,
         /** 录音错误回调函数 */
         onError = _e === void 0 ? function () { } : _e;
         /** 是否正在录音 */
@@ -7918,27 +7918,27 @@ var TapeRecorder = /** @class */ (function () {
      */
     function TapeRecorder(_a) {
         var _this = this;
-        var _b = _a === void 0 ? {} : _a, 
+        var _b = _a === void 0 ? {} : _a,
         /** 输入类型为 audio 时，需要指定 tap */
-        _c = _b.tape, 
+        _c = _b.tape,
         /** 输入类型为 audio 时，需要指定 tap */
-        tape = _c === void 0 ? null : _c, 
+        tape = _c === void 0 ? null : _c,
         /** 采样率 */
-        sampleRate = _b.sampleRate, 
+        sampleRate = _b.sampleRate,
         /** 即将播放 */
-        _d = _b.onStart, 
+        _d = _b.onStart,
         /** 即将播放 */
-        onStart = _d === void 0 ? function () { } : _d, 
+        onStart = _d === void 0 ? function () { } : _d,
         /** 录音数据回调函数（频率会比录音状态慢，会缓冲一段） */
-        _e = _b.onData, 
+        _e = _b.onData,
         /** 录音数据回调函数（频率会比录音状态慢，会缓冲一段） */
-        onData = _e === void 0 ? function () { } : _e, 
+        onData = _e === void 0 ? function () { } : _e,
         /** 结束播放 */
-        _f = _b.onStop, 
+        _f = _b.onStop,
         /** 结束播放 */
-        onStop = _f === void 0 ? function () { } : _f, 
+        onStop = _f === void 0 ? function () { } : _f,
         /** 录音错误回调函数 */
-        _g = _b.onError, 
+        _g = _b.onError,
         /** 录音错误回调函数 */
         onError = _g === void 0 ? function () { } : _g;
         /** 播放状态 */
@@ -8312,17 +8312,17 @@ var Recognition = /** @class */ (function (_super) {
      * @param options 配置参数
      */
     function Recognition(_a, options) {
-        var 
+        var
         /** 应用 appkey */
-        appkey = _a.appkey, 
+        appkey = _a.appkey,
         /** 网关地址 */
-        server = _a.server, 
+        server = _a.server,
         /** 设备 id */
-        deviceId = _a.deviceId, 
+        deviceId = _a.deviceId,
         /** token 配置 */
-        accessToken = _a.accessToken, 
+        accessToken = _a.accessToken,
         /** @deprecated token 获取函数 */
-        getAccessToken = _a.getAccessToken, 
+        getAccessToken = _a.getAccessToken,
         /** 流程插件 */
         plugin = _a.plugin;
         var _this = _super.call(this, {
@@ -8638,7 +8638,7 @@ var Recognition = /** @class */ (function (_super) {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: 
+                    case 0:
                     // 环境初始化
                     return [4 /*yield*/, this.initEnv()];
                     case 1:
@@ -9027,17 +9027,17 @@ var RapidFixRecognitionCommand = /** @class */ (function (_super) {
      * 构造函数
      */
     function RapidFixRecognitionCommand(_a) {
-        var 
+        var
         /** 设备 id */
-        deviceId = _a.deviceId, 
+        deviceId = _a.deviceId,
         /** 任务 id */
-        taskId = _a.taskId, 
+        taskId = _a.taskId,
         /** 应用 appkey */
-        appkey = _a.appkey, 
+        appkey = _a.appkey,
         /** 识别实例 */
-        instance = _a.instance, 
+        instance = _a.instance,
         /** 配置格式化钩子 */
-        optionsFormat = _a.optionsFormat, 
+        optionsFormat = _a.optionsFormat,
         /** 自定义命令钩子 */
         parseCommand = _a.parseCommand;
         var _this = _super.call(this, {
@@ -9220,17 +9220,17 @@ var RapidFixRecognition = /** @class */ (function (_super) {
      * @param options 配置参数
      */
     function RapidFixRecognition(_a, options) {
-        var 
+        var
         /** 应用 appkey */
-        appkey = _a.appkey, 
+        appkey = _a.appkey,
         /** 网关地址 */
-        server = _a.server, 
+        server = _a.server,
         /** 设备 id */
-        deviceId = _a.deviceId, 
+        deviceId = _a.deviceId,
         /** token 配置 */
-        accessToken = _a.accessToken, 
+        accessToken = _a.accessToken,
         /** @deprecated token 获取函数 */
-        getAccessToken = _a.getAccessToken, 
+        getAccessToken = _a.getAccessToken,
         /** 流程插件 */
         plugin = _a.plugin;
         var _this = _super.call(this, {
@@ -9525,7 +9525,7 @@ var RapidFixRecognition = /** @class */ (function (_super) {
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: 
+                    case 0:
                     // 环境初始化
                     return [4 /*yield*/, this.initEnv()];
                     case 1:
@@ -9808,7 +9808,7 @@ var SynthesisCommand = /** @class */ (function (_super) {
                     voice: typeof extra.voice === 'string'
                         ? extra.voice
                         : 'aiqi',
-                    format: 'mp3',
+                    format:  typeof extra.voice === 'string' ? extra.format : 'wav',
                     sample_rate: extra.sampleRate,
                     volume: typeof extra.volume === 'number' ? extra.volume : 50,
                     speech_rate: typeof extra.speechRate === 'number' ? extra.speechRate : 0,
@@ -9899,15 +9899,15 @@ var Synthesis = /** @class */ (function (_super) {
      * @param options 配置参数
      */
     function Synthesis(_a, options) {
-        var 
+        var
         /** 应用 appkey */
-        appkey = _a.appkey, 
+        appkey = _a.appkey,
         /** 网关地址 */
-        server = _a.server, 
+        server = _a.server,
         /** 设备 id */
-        deviceId = _a.deviceId, 
+        deviceId = _a.deviceId,
         /** token 配置 */
-        accessToken = _a.accessToken, 
+        accessToken = _a.accessToken,
         /** @deprecated token 获取函数 */
         getAccessToken = _a.getAccessToken;
         var _this = _super.call(this, {
@@ -10125,27 +10125,27 @@ var NlsClient = /** @class */ (function () {
      * 构造函数
      */
     function NlsClient(_a) {
-        var 
+        var
         /** 语音应用 appkey */
-        appkey = _a.appkey, 
+        appkey = _a.appkey,
         /** 网关地址，可以自定义。默认公有云线上地址：wss://nls-gateway.cn-shanghai.aliyuncs.com/ws/v1 */
-        _b = _a.server, 
+        _b = _a.server,
         /** 网关地址，可以自定义。默认公有云线上地址：wss://nls-gateway.cn-shanghai.aliyuncs.com/ws/v1 */
-        server = _b === void 0 ? 'wss://nls-gateway.cn-shanghai.aliyuncs.com/ws/v1' : _b, 
+        server = _b === void 0 ? 'wss://nls-gateway.cn-shanghai.aliyuncs.com/ws/v1' : _b,
         /** 设备 id */
-        _c = _a.deviceId, 
+        _c = _a.deviceId,
         /** 设备 id */
-        deviceId = _c === void 0 ? getDeviceId() : _c, 
+        deviceId = _c === void 0 ? getDeviceId() : _c,
         /** token 设置，支持字符串或者获取函数，获取函数的方式为动态调用，每次需要使用 token 时，会通过获取函数获取最新 token */
-        accessToken = _a.accessToken, 
+        accessToken = _a.accessToken,
         /** @deprecated 推荐使用 accessToken。token 获取函数，每次需要使用 token 时，会通过获取函数获取最新 token */
-        getAccessToken = _a.getAccessToken, 
+        getAccessToken = _a.getAccessToken,
         /** 是否开启 debug 模式 */
-        _d = _a.debug, 
+        _d = _a.debug,
         /** 是否开启 debug 模式 */
-        debug = _d === void 0 ? false : _d, 
+        debug = _d === void 0 ? false : _d,
         /** 是否开启测试模式 */
-        _e = _a.isTestEnv, 
+        _e = _a.isTestEnv,
         /** 是否开启测试模式 */
         isTestEnv = _e === void 0 ? false : _e;
         this.appkey = appkey;

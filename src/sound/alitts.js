@@ -40,6 +40,7 @@ export class ALITTS {
                 volume: 'volume' in _options.tts ? _options.tts.volume : 50, // 音量，取值范围 0 ~ 100
                 speechRate: 'speechRate' in _options.tts ? _options.tts.speechRate : 0, // 语速，取值范围 -500 ~ 500
                 pitchRate: 'pitchRate' in _options.tts ? _options.tts.pitchRate : 0, // 语调，取值范围 -500 ~ 500
+                format:'format' in _options.tts ? _options.tts.format : 'wav',
                 enableSubtitle: true,
             });
 
