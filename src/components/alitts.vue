@@ -14,6 +14,7 @@
   import axios from 'axios'
   import { AMSound } from "../sound/sound";
   import {mapActions, mapGetters} from "vuex";
+  let Base64 = require('js-base64').Base64;
   export default {
     name:"alitts",
     computed: {
@@ -31,9 +32,9 @@
     },
     created() {
       if(this.$route.query.text){
-        this.text = decodeURIComponent(this.$route.query.text);
+        this.text = Base64.decode(this.$route.query.text);
         let _data = this.$route.query
-        this.getAudio(decodeURIComponent(_data.text),_data.speechRate,_data.volume,_data.voiceName,_data.pitchRate,_data.format)
+        this.getAudio(this.text,_data.speechRate,_data.volume,_data.voiceName,_data.pitchRate,_data.format)
       }
     },
     mounted() {
@@ -44,14 +45,14 @@
       ...mapActions(["fetchSoundToken"]),
 
       testTtsApi(){
-        let Base64 = require('js-base64').Base64;
-        console.log(Base64.encode('大家好'))
         axios({
           // responseType:'blob',
           // headers:{
           //   'Content-Type':'audio/mp3'
           // },
+          //
           url:'http://39.106.142.30:3000/CMU/getALITTS',
+          // url:'http://0.0.0.0:3000/CMU/getALITTS',
           method:'post',
           data:{
             text:this.text,
