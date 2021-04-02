@@ -31,9 +31,9 @@
     },
     created() {
       if(this.$route.query.text){
-        this.text = this.$route.query.text;
+        this.text = decodeURIComponent(this.$route.query.text);
         let _data = this.$route.query
-        this.getAudio(_data.text,_data.speechRate,_data.volume,_data.voiceName,_data.pitchRate,_data.format)
+        this.getAudio(decodeURIComponent(_data.text),_data.speechRate,_data.volume,_data.voiceName,_data.pitchRate,_data.format)
       }
     },
     mounted() {
